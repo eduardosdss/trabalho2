@@ -1,0 +1,57 @@
+.favorito {
+  color: gold;
+  font-weight: bold;
+}
+.card {
+  margin-bottom: 15px;
+}
+/* Estilo base */
+.favorito {
+  color: gold;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.favorito:hover {
+  transform: scale(1.05);
+}
+
+/* Cards animados ao aparecer */
+.card {
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 0.5s forwards;
+}
+
+/* Botão de estrela com animação */
+button.btn-warning {
+  transition: transform 0.3s ease;
+}
+button.btn-warning:hover {
+  transform: rotate(15deg) scale(1.2);
+}
+
+/* Animação ao aparecer */
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Input focus animado */
+input:focus, select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Adição de destaque ao novo item (JS pode aplicar essa classe se desejar) */
+.novo-filme {
+  animation: destaque 0.7s ease;
+}
+
+@keyframes destaque {
+  0% { background-color: #d4edda; }
+  100% { background-color: transparent; }
+}
